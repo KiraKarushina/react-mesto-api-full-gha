@@ -1,0 +1,6 @@
+.popup__input_enter {
+  border-bottom: 2px solid #ccc;
+  background-color: #000;
+  color: #fff;
+  padding-top: 30px;
+}

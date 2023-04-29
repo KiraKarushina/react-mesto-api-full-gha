@@ -1,0 +1,16 @@
+.popup__submit_button-container {
+  width: 358px;
+  height: 50px;
+  background-color: #fff;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  padding: 0;
+  margin: 216px 0px 15px 0px;
+  cursor: pointer;
+  transition: opacity 0.5s ease-out;
+  color: #000;
+}
