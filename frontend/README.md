@@ -1,7 +1,15 @@
-# Здесь будет ваш проект на Реакте с авторизацией и регистрацией
+[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
+# react-mesto-api-full
+Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
+  
+Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Используйте ваши предыдущие наработки по проекту Mesto. Это может быть работа 11-го спринта или его улучшенная версия после 2-х последних спринтов. 
+Адрес репозитория: https://github.com/KiraKarushina/mesto-15.git 
 
-Все запросы на авторизацию, регистрацию и проверку токена должны работать через сервис `https://auth.nomoreparties.co`. Остальные запросы, не относящиеся к этой проектной работе могут быть к бэкенду из предыдущих спринтов.
+## Ссылки на проект
 
-Успехов!
+IP-адрес 158.160.34.100
+
+Frontend https://domainname.praktikum.nomoredomains.monster/ 
+
+Backend https://backend.nomoredomains.monster 
