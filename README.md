@@ -4,7 +4,7 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/KiraKarushina/mesto-15.git 
+Адрес репозитория: https://github.com/KiraKarushina/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
 
