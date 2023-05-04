@@ -53,7 +53,7 @@ module.exports.getCurrentUser = (req, res, next) => User.findById(req.user._id)
 
     res.send({ data });
   })
-  .catch((err) => next(err.name === errorNames.cast ? new BadRequestError() : err));
+  .catch((err) => next(err));
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
@@ -92,13 +92,7 @@ module.exports.updateProfile = (req, res, next) => {
     { new: true, runValidators: true },
   )
     .then((user) => res.send({ data: user }))
-    .catch((err) => {
-      if (err.name === errorNames.validation || err.name === errorNames.cast) {
-        next(new BadRequestError());
-      } else {
-        next(err);
-      }
-    });
+    .catch((err) => {next(err)});
 };
 
 module.exports.updateAvatar = (req, res, next) => {
@@ -109,13 +103,7 @@ module.exports.updateAvatar = (req, res, next) => {
     { new: true, runValidators: true },
   )
     .then((user) => res.send({ data: user }))
-    .catch((err) => {
-      if (err.name === errorNames.validation || err.name === errorNames.cast) {
-        next(new BadRequestError());
-      } else {
-        next(err);
-      }
-    });
+    .catch((err) => {next(err)});
 };
 
 module.exports.login = (req, res, next) => {

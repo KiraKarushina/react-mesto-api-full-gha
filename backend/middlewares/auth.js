@@ -4,7 +4,7 @@ const UnauthorizedError = require('../customErrors/UnauthorizedError');
 
 module.exports = (req, res, next) => {
   if (!req.cookies.jwt) {
-    throw new UnauthorizedError();
+    next(new UnauthorizedError());
   }
   const token = req.cookies.jwt;
   let payload;
@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
   try {
     payload = jwt.verify(token, jwtUtils.getJWTSecret());
   } catch (err) {
-    throw new UnauthorizedError();
+    next(new UnauthorizedError());
   }
 
   req.user = payload; // записываем пейлоуд в объект запроса

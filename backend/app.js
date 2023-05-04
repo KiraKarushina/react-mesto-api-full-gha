@@ -5,10 +5,7 @@ const { errors, celebrate, Joi } = require('celebrate');
 const { regular } = require('./utils/constants');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-
-const statusCodes = require('./utils/statusCodes');
-const messages = require('./utils/messages');
-
+const globalErrorHandler = require('./middlewares/globalErrorHandler');
 const { createUser, login } = require('./controllers/users');
 
 const auth = require('./middlewares/auth');
@@ -57,17 +54,7 @@ app.use(mainRouter);
 app.use(errorLogger);
 app.use(errors());
 
-app.use(
-  (err, req, res, next) => {
-    const {
-      statusCode = statusCodes.internal,
-      message = messages.internal,
-    } = err;
-
-    res.status(statusCode).send({ message });
-    next();
-  },
-);
+app.use(globalErrorHandler);
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);

@@ -12,7 +12,7 @@ module.exports.createCard = (req, res, next) => {
   const owner = req.user._id;
 
   Card.create({ name, link, owner })
-    .then((card) => res.status(200).send({ data: card }))
+    .then((card) => res.status(201).send({ data: card }))
     .catch((err) => next(err.name === errorNames.validation ? new BadRequestError() : err));
 };
 
